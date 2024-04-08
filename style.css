@@ -1,0 +1,115 @@
+html, body {
+  padding: 0;
+  height: 100%;
+  display: block;
+  align-content: center;
+  background-image: url('imagens/fundo.gif'); /* Define a imagem de fundo */
+}
+
+#gameArea {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  position: relative; /* Define uma posição relativa */
+  height: 100%; /* Garante que o gameArea ocupe toda a altura da tela */
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-top: 300px;
+}
+
+canvas {
+  display: block;
+  margin: auto; /* Centraliza o elemento */
+}
+
+/* Estilos para o campo de entrada */
+#playerName {
+  width: 200px;
+  height: 40px; /* Altera a altura do balão do campo de entrada */
+  padding: 5px; /* Adiciona preenchimento interno ao balão */
+  text-align: center; /* Centraliza o texto do placeholder */
+  font-size: 16px; /* Tamanho da fonte */
+  margin-top: 10px;
+}
+
+/* Estilos para o label */
+#playerNameLabel {
+  color: rgb(17, 215, 237); /* Altera a cor do texto */
+  font-family: Arial, sans-serif; /* Altera a fonte da família */
+  font-size: 30px; /* Altera o tamanho da fonte */
+  font-weight: bold; /* Altera o peso da fonte para negrito */
+  text-shadow: 2px 2px 4px rgb(255, 255, 255); /* Adiciona uma sombra ao texto */
+}
+
+
+/* Estilos para o botão "startButton" com efeito de brilho ao passar o mouse */
+#startButton {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#startButton:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+#startButton:active {
+  color: #000
+}
+
+#startButton:active:after {
+  background: transparent;
+}
+
+#startButton:hover:before {
+  opacity: 1;
+}
+
+#startButton:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #11c9c0;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* Estilos para o texto h2 dentro de #gameArea */
+#gameArea h2 {
+  color: rgb(17, 215, 237); /* Altera a cor do texto */
+  font-family: Arial, sans-serif; /* Altera a fonte da família */
+  font-size: 50px; /* Altera o tamanho da fonte */
+  font-weight: bold; /* Altera o peso da fonte para negrito */
+  text-shadow: 2px 2px 4px rgb(255, 255, 255); /* Adiciona uma sombra ao texto */
+}
+
