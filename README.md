@@ -1,5 +1,3 @@
-Entendi! Aqui está uma versão do README mencionando a Alura e oferecendo mais informações sobre o curso:
-
 ---
 
 # Pong Game
