@@ -1,5 +1,3 @@
----
-
 # Pong Game
 
 Este é um jogo simples de Pong implementado em JavaScript usando a biblioteca p5.js para renderização gráfica e interações de áudio.
